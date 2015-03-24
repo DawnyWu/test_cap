@@ -28,9 +28,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
-gem 'capistrano', '~> 3.3.0'
-gem 'capistrano-rails'
+group :development do
+	gem 'capistrano', '~> 3.3.0'
+	gem 'capistrano-rbenv'
+	gem 'capistrano-rails'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
